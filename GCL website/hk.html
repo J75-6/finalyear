@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Kaizen Portal</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <img src="GCL logo.jpg" alt="Company Logo" class="logo">
+        <div class="header">
+            <h1>Welcome, HR Name</h1>
+            <p>HR ID: HR123</p>
+        </div>
+
+        <div class="section">
+            <h2>Personal Login Details</h2>
+            <p>HR Name: John Smith</p>
+            <p>HR Number: HR123</p>
+        </div>
+
+        <div class="section">
+            <h2>Department-Wise Kaizen</h2>
+            <form id="kaizen-form">
+                <select id="department" required>
+                    <option value="" disabled selected>Select a Department</option>
+                    <option value="Engine Assembly">Engine Assembly</option>
+                    <option value="Engine Testing">Engine Testing</option>
+                    <option value="Engine Application">Engine Application</option>
+                    <option value="Dispatch">Dispatch</option>
+                    <option value="Store">Store</option>
+                    <option value="Machine Shop">Machine Shop</option>
+                    <option value="Maintenance">Maintenance</option>
+                    <option value="GID">GID</option>
+                    <option value="SQA">SQA</option>
+                    <option value="Purchase">Purchase</option>
+                    <option value="HR">HR</option>
+                    <option value="Administration">Administration</option>
+                    <option value="ME">ME</option>
+                    <option value="Accounts">Accounts</option>
+                    <option value="NPCD">NPCD</option>
+                    <!-- Add more departments as needed -->
+                </select>
+                <button type="submit" class="button">Show Kaizen Details</button>
+            </form>
+            <div id="kaizen-details" style="display: none;">
+                <h3>Number of Kaizen Completed: <span id="kaizen-completed">0</span></h3>
+                <h3>Number of Kaizen Remaining: <span id="kaizen-remaining">0</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

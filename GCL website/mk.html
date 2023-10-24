@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <img src="GCL logo.jpg" alt="Company Logo" class="logo">
+        <div class="header">
+            <h1>Welcome, Manager Name</h1>
+            <p>Manager ID: MGR123</p>
+        </div>
+
+        <div class="section">
+            <h2>Personal Login Details</h2>
+            <p>Manager Name: John Doe</p>
+            <p>Manager Number: MGR123</p>
+        </div>
+
+        <div class="section">
+            <h2>Kaizen Remaining to Validate</h2>
+            <form id="kaizen-form">
+                <select name="approved" required>
+                    <option value="" disabled selected>Approved</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <select name="notApproved" required>
+                    <option value="" disabled selected>Not Approved</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <select name="employee" required>
+                    <option value="" disabled selected>Select Employee</option>
+                    <option value="employee1">Employee 1</option>
+                    <option value="employee2">Employee 2</option>
+                    <option value="employee3">Employee 3</option>
+                    <!-- Add more employees as needed -->
+                </select>
+                <button type="submit" class="button">Show Kaizen Details</button>
+            </form>
+            <!-- Add content to display kaizen details based on approval status and employee selection here -->
+        </div>
+    </div>
+
+    <script>
+        // Your JavaScript code here (if needed)
+    </script>
+</body>
+</html>

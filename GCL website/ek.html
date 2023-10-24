@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <img src="GCL logo.jpg" alt="Company Logo" class="logo">
+        <div class="header">
+            <h1>Welcome, Employee Name: XYZ</h1>
+            <p>Employee Number: 123</p>
+        </div>
+        <div class="section" id="year-section">
+            <h2>Select Year to View Kaizen</h2>
+            <select id="year-dropdown">
+                <option value="" disabled selected>Select</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <!-- Add more years as needed -->
+            </select>
+            <button class="button">View Kaizen</button>
+        </div>
+        <div class="section" id="kaizen-section">
+            <h2 class="toggle-form button" id="toggle-kaizen-button">Add New Kaizen</h2>
+            <form class="form" id="kaizen-form">       
+                <label for="Kaizen-name">Kaizen Name:</label>
+                <input type="text" id="Kaizen-name">
+                <label for="Kaizen-type">Type of Kaizen:</label>
+                <select id="Kaizen-type">
+                    <option value="" disabled selected>Select</option>
+                    <option value="Restorative">Restorative</option>
+                    <option value="Rennovative">Rennovative</option>
+                    <option value="Innovative">Innovative</option>
+                    <option value="Breakthrough">Breakthrough</option>
+                </select>
+                <label for="Kaizen-objective">Kaizen Objective:</label>
+                <select id="Kaizen-objective">
+                    <option value="" disabled selected>Select</option>
+                    <option value="To Eliminate Fatigue">To Eliminate Fatigue</option>
+                    <option value="To Reduce Rejection Cost">To Reduce Rejection Cost</option>
+                    <option value="To Reduce Consumable Cost">To Reduce Consumable Cost</option>
+                    <option value="To Reduce Power Cost">To Reduce Power Cost</option>
+                    <option value="To Reduce Tool Cost">To Reduce Tool Cost</option>
+                    <option value="To Reduce Maintenance Spare Cost">To Reduce Maintenance Spare Cost</option>
+                    <option value="To Eliminate Defect">To Eliminate Defect</option>
+                    <option value="To Reduce Cycle Time">To Reduce Cycle Time</option>
+                    <option value="To Reduce Takt Time">To Reduce Takt Time</option>
+                    <option value="To Reduce Delivery Time">To Reduce Delivery Time</option>
+                    <option value="To Eliminate Unsafe Acts">To Eliminate Unsafe Acts</option>
+                    <option value="To Eliminate Unsafe Conditions">To Eliminate Unsafe Conditions</option>
+                    <option value="To Eliminate Near Miss Cases">To Eliminate Near Miss Cases</option>
+                    <option value="To Improve Moral of Team">To Improve Moral of Team</option>
+s                                        <!-- Add other objective options as needed -->
+                </select>
+                <label for="Problem">Problem:</label>
+                <input type="text" id="Problem">
+                <label for="Idea">Idea:</label>
+                <select id="Idea">
+                    <option value="" disabled selected>Select</option>
+                    <option value="Team Idea">Team Idea</option>
+                    <option value="Individual Idea">Individual Idea</option>
+                </select>
+                <label for="Benefits">Benefits:</label>
+                <select id="Benefits">
+                    <option value="" disabled selected>Select</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                </select>
+                <label for="Horizontal-Development">Horizontal Development:</label>
+                <select id="Horizontal-Development">
+                    <option value="" disabled selected>Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+                <div class="horizontal-development-details" id="horizontal-yes-details">
+                    <label for="Horizontal-Development-Details-Yes">How to Apply:</label>
+                    <input type="text" id="Horizontal-Development-Details-Yes">
+                </div>
+                <div class="horizontal-development-details" id="horizontal-no-details">
+                    <label for="Horizontal-Development-Details-No">Why Not:</label>
+                    <input type="text" id="Horizontal-Development-Details-No">
+                </div>
+                <button class="button">Submit Kaizen</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const toggleButton = document.getElementById('toggle-kaizen-button');
+        const kaizenForm = document.getElementById('kaizen-form');
+        const horizontalDevelopment = document.getElementById('Horizontal-Development');
+        const horizontalYesDetails = document.getElementById('horizontal-yes-details');
+        const horizontalNoDetails = document.getElementById('horizontal-no-details');
+
+        toggleButton.addEventListener('click', function() {
+            kaizenForm.style.display = kaizenForm.style.display === 'none' ? 'block' : 'none';
+        });
+
+        horizontalDevelopment.addEventListener('change', function() {
+            if (horizontalDevelopment.value === 'Yes') {
+                horizontalYesDetails.style.display = 'block';
+                horizontalNoDetails.style.display = 'none';
+            } else if (horizontalDevelopment.value === 'No') {
+                horizontalYesDetails.style.display = 'none';
+                horizontalNoDetails.style.display = 'block';
+            } else {
+                horizontalYesDetails.style.display = 'none';
+                horizontalNoDetails.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
